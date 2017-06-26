@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="manifest" href="manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PWA demo</title>
+</head>
+<body>
+  <h1>Hello World!</h1>
+  <script>
+    if (window.navigator.serviceWorker !== null) {
+      window.navigator.serviceWorker.register('demo.js')
+      .then(function (registration) {
+        console.log('Registered events at scope:', registration.scope)
+      })
+    }
+  </script>
+</body>
+</html>
